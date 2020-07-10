@@ -28,6 +28,9 @@
 */
 
 // Code Here 
+var first = function(names, callback){
+  callback(names);
+}
 
 // Do not edit the code below.
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
@@ -106,7 +109,15 @@ contains(names, 'Colt', function(result){
 */
 
 //Code Here
-
+function uniq(array, pizza){
+  for(let i = 0;i < array.length; i++){
+    for(let j = array.length - 1; j>= 0; j--){
+      if (array[i] === array[j] && i !==j){
+        array.splice(j, 1)
+      }
+    }
+  }
+}
 // Do not edit the code below.
 uniq(names, function(uniqArr){
   console.log('The new names array with all the duplicate items removed is ', uniqArr);
